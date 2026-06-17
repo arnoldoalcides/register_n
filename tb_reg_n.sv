@@ -2,11 +2,13 @@ module tb_reg_n;
     parameter WIDTH_TB = 8;
     logic clk_tb=0;
     logic rst_tb;
+    logic en_tb;
     logic [WIDTH_TB-1:0] d_tb, q_tb;
 
     reg_n #(.WIDTH(WIDTH_TB)) dut (
         .clk(clk_tb),
-        .rst(rst_tb), 
+        .rst(rst_tb),
+        .en(en_tb),
         .d(d_tb),
         .q(q_tb)
     );
